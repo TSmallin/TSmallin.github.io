@@ -1,7 +1,7 @@
 ---
 layout: page
-title: PasswordBox
-permalink: /passwordbox/
+title: Privacy
+permalink: /privacy
 ---
 
 # 密码小库隐私声明

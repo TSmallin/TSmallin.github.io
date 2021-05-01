@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Routes from "./router/Routes";
+import { BrowserRouter as Router, Link } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <header>
+           <div className="App-header">
+              <Link to={'/about'}>About</Link>
+              <Link to={'/privacy'}>Privacy</Link>
+            </div>
+        </header>
+        <div className="App-mid">
+          <Routes />
+        </div>
+        <footer>
+            <div className="App-footer">
+              <a href={'mailto:tanglin.me@foxmail.com?subject=PasswordBox-Feedback'}>联系我们</a>
+              <p/>
+              <span>Copyright © 2021 PasswordBoxApp. All rights reserved.</span>
+            </div>
+        </footer>
+      </div>
+    </Router>
   );
 }
 
